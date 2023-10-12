@@ -1,5 +1,10 @@
-.cards {}
-
+.cards {
+    max-width: 882px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:18px;
+    margin: 47px auto 0;
+}
 .cards__image {
     border-radius: 10px 10px 0px 0px;
     width: 282px;
@@ -56,16 +61,20 @@
     position: absolute;
     top: 18px;
     right: 15px;
+    cursor: pointer;
+}
+
+.cardslike-button_type_outlined:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.cardslike-button_type_filled {
+    cursor: pointer;
+    display: none;
 }
 
 .cards__trash-bin:hover {
     opacity: 0.6;
 }
 
-.cards__like-button:hover {
-    opacity: 0.5;
-}
-
-.cards__like-button.filled path {
-    fill: black;
-}
