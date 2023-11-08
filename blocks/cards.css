@@ -18,7 +18,7 @@
     position: relative;
 }
 
-.cards_name {
+.cards__name {
     font-size: 24px;
     line-height: normal;
     font-family: "Inter", Arial, sans-serif;
@@ -64,12 +64,12 @@
     cursor: pointer;
 }
 
-.cardslike-button_type_outlined:hover {
+.cards__button_type_outlined:hover {
     cursor: pointer;
     opacity: 0.5;
 }
 
-.cardslike-button_type_filled {
+.cards__button_type_filled {
     cursor: pointer;
     display: none;
 }
