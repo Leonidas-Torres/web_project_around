@@ -1,4 +1,50 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const initialCards = [
+    {
+      name: "Valle de Yosemite",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg",
+    },
+    {
+      name: "Lago Louise",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg",
+    },
+    {
+      name: "Montañas Calvas",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg",
+    },
+    {
+      name: "Latemar",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/latemar.jpg",
+    },
+    {
+      name: "Parque Nacional de la Vanoise",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/vanoise.jpg",
+    },
+    {
+      name: "Lago di Braies",
+      link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
+    },
+  ];
+  
+  function addCard(card) {
+    const cardElement = document.createElement("div");
+    cardElement.classList.add("cards__grid");
+
+    cardElement.innerHTML = `
+    <img class="cards__image" src="${card.link}" alt="${card.name}">
+    <img class="cards__trash-bin" src="./images/trash.svg" alt="Botón de eliminar" onclick="this.parentElement.remove();">
+    <div class="cards__card-name">
+      <div class="cards__text-button">
+        <h3 class="cards__name">${card.name}</h3>
+        <img class="cards__button cards__button_type_outlined" src="./images/like.svg" alt="Botón de me gusta" onclick="window.hiddenOutlined(event)">
+        <img class="cards__button cards__button_type_filled" src="./images/like-filled.svg" alt="Botón de me gusta lleno" onclick="window.hiddenFilled(event)" style="display: none;">
+      </div>
+    </div>`;
+
+    const cardsSection = document.querySelector("#cards");
+    cardsSection.appendChild(cardElement);
+  }
+  initialCards.forEach(addCard);
   ImagePopup();
   window.onclick = function (event) {
     if (event.target.classList.contains("modal")) {
@@ -118,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>`;
 
     const cardsSection = document.querySelector("#cards");
-    cardsSection.appendChild(nuevaTarjeta);
+    cardsSection.prepend(nuevaTarjeta);
 
     cont_modal.style.display = "none";
     nombreInput.value = "";
@@ -131,10 +177,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll(".cards__image");
     const popup = document.getElementById("image-popup");
     const popupImg = document.getElementById("popup-img");
+    const popupTitle = document.getElementById("image-popup-title");
 
     images.forEach((image) => {
       image.addEventListener("click", function () {
+        const cardName = this.alt;
         popupImg.src = this.src;
+        popupTitle.textContent = cardName;
         popup.style.display = "flex";
       });
     });
