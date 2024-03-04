@@ -5,6 +5,12 @@
 
 .header__logo {
     margin-bottom: 41px;
+    background-image: url("/images/logo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    width: 173px;
+    color: white;
 }
 
 .header__separator {
