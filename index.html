@@ -31,106 +31,52 @@
             <h3 class="profile__job" id="profile-job">Explorador</h3>
           </div>
         </div>
-        <button class="profile__add-info"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+        <button class="profile__add-info" id="image-button" data-modal-target="#popup-image"><svg width="22" height="22"
+            viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M22 9.77778H12.2222V0H9.77778V9.77778H0V12.2222H9.77778V22H12.2222V12.2222H22V9.77778Z"
               fill="white" />
           </svg></button>
       </section>
-      <section class="cards">
-        <div class="cards__grid">
-          <img class="cards__image" src="./images/mejillones.jpg" alt="Capitania de Mejillones">
-          <img class="cards__trash-bin" src="./images/trash.svg" alt="Boton de cierre">
-          <div class="cards__card-name">
-            <div class="cards__text-button">
-              <h3 class="cards__name">Capitania de Mejillones</h3>
-              <img class="cards__button cards__button_type_outlined" src="./images/like.svg" alt="boton de me gusta"
-                onclick="hiddenOutlined(event)">
-              <img class="cards__button cards__button_type_filled" src="./images/like-filled.svg" alt="boton de me gusta"
-                onclick="hiddenFilled(event)">
-            </div>
-          </div>
-        </div>
-        <div class="cards__grid">
-          <img class="cards__image" src="./images/playa-rinconada.jpg" alt="Playa Rinconada">
-          <img class="cards__trash-bin" src="./images/trash.svg" alt="Boton de cierre">
-          <div class="cards__card-name">
-            <div class="cards__text-button">
-              <h3 class="cards__name">Playa Rinconada</h3>
-              <img class="cards__button cards__button_type_outlined" src="./images/like.svg" alt="boton de me gusta"
-                onclick="hiddenOutlined(event)">
-              <img class="cards__button cards__button_type_filled" src="./images/like-filled.svg" alt="boton de me gusta"
-                onclick="hiddenFilled(event)">
-            </div>
-          </div>
-        </div>
-        <div class="cards__grid">
-          <img class="cards__image" src="./images/playa-hornitos.png" alt="Playa Hornitos">
-          <img class="cards__trash-bin" src="./images/trash.svg" alt="Boton de cierre">
-          <div class="cards__card-name">
-            <div class="cards__text-button">
-              <h3 class="cards__name">Playa Hornitos</h3>
-              <img class="cards__button cards__button_type_outlined" src="./images/like.svg" alt="boton de me gusta"
-                onclick="hiddenOutlined(event)">
-              <img class="cards__button cards__button_type_filled" src="./images/like-filled.svg" alt="boton de me gusta"
-                onclick="hiddenFilled(event)">
-            </div>
-          </div>
-        </div>
-        <div class="cards__grid">
-          <img class="cards__image" src="./images/la-portada.jpeg" alt="La Portada">
-          <img class="cards__trash-bin" src="./images/trash.svg" alt="Boton de cierre">
-          <div class="cards__card-name">
-            <div class="cards__text-button">
-              <h3 class="cards__name">La Portada</h3>
-              <img class="cards__button cards__button_type_outlined" src="./images/like.svg" alt="boton de me gusta"
-                onclick="hiddenOutlined(event)">
-              <img class="cards__button cards__button_type_filled" src="./images/like-filled.svg" alt="boton de me gusta"
-                onclick="hiddenFilled(event)">
-            </div>
-          </div>
-        </div>
-        <div class="cards__grid">
-          <img class="cards__image" src="./images/punta-angamos.jpeg" alt="Mirador Punta Angamos">
-          <img class="cards__trash-bin" src="./images/trash.svg" alt="Boton de cierre">
-          <div class="cards__card-name">
-            <div class="cards__text-button">
-              <h3 class="cards__name">Mirador Punta Angamos</h3>
-              <img class="cards__button cards__button_type_outlined" src="./images/like.svg" alt="boton de me gusta"
-                onclick="hiddenOutlined(event)">
-              <img class="cards__button cards__button_type_filled" src="./images/like-filled.svg" alt="boton de me gusta"
-                onclick="hiddenFilled(event)">
-            </div>
-          </div>
-        </div>
-        <div class="cards__grid">
-          <img class="cards__image" src="./images/iglesia-mejillones.jpg" alt="Iglesia de Mejillones">
-          <img class="cards__trash-bin" src="./images/trash.svg" alt="Boton de cierre">
-          <div class="cards__card-name">
-            <div class="cards__text-button">
-              <h3 class="cards__name">Iglesia de Mejillones</h3>
-              <img class="cards__button cards__button_type_outlined" src="./images/like.svg" alt="boton de me gusta"
-                onclick="hiddenOutlined(event)">
-              <img class="cards__button cards__button_type_filled" src="./images/like-filled.svg" alt="boton de me gusta"
-                onclick="hiddenFilled(event)">
-            </div>
-          </div>
-        </div>
+      <section id="cards" class="cards">
       </section>
-      <footer class="footer"><h2 class="footer__text">	&#169; 2023 Alrededor de Mejillones</h2></footer>
+      <footer class="footer">
+        <h2 class="footer__text"> &#169; 2023 Alrededor de Mejillones</h2>
+      </footer>
     </main>
   </div>
   <div id="myModal" class="modal">
-    <div class="modal-content">
-      <img class="modal-content__close" src="./images/close-icon.svg" alt="boton de cierre">
-      <h2 class="modal-content__title">Editar perfil</h2>
-      <input class="modal-content__input" type="text" id="name" name="name" placeholder="Nombre">
-      <hr class="modal-content__separator">
-      <input class="modal-content__input" type="text" id="about" name="about" placeholder="Acerca de mí">
-      <hr class="modal-content__separator">
-      <button class="modal-content__button" id="save-button">Guardar</button>
+    <div class="modal__content">
+      <img class="modal__content-close" src="./images/close-icon.svg" alt="boton de cierre">
+      <h2 class="modal__content-title">Editar perfil</h2>
+      <input class="modal__content-input" type="text" id="name" name="name" placeholder="Nombre">
+      <hr class="modal__content-separator">
+      <input class="modal__content-input" type="text" id="about" name="about" placeholder="Acerca de mÃ­">
+      <hr class="modal__content-separator">
+      <button class="modal__content-button" id="save-button">Guardar</button>
     </div>
   </div>
+
+  <div id="modal_add" class="modal">
+    <div class="modal__content">
+      <img class="modal__content-close" src="./images/close-icon.svg" alt="boton de cierre">
+      <h2 class="modal__content-title">Agregar card</h2>
+      <form action="submit" id="form_add">
+        <input class="modal__content-input" type="text" id="name_add" name="name_add" placeholder="Nombre de la card ">
+        <hr class="modal__content-separator">
+        <input class="modal__content-input" type="text" id="image_add" name="image_add"
+          placeholder="Ingrese la URL de la imagen">
+      </form>
+      <button class="modal__content-button" type="submit" id="save-button-add" onclick="Form()">Agregar</button>
+    </div>
+  </div>
+
+  <div id="image-popup" class="modal-img">
+    <div class="modal-img__content">
+      <img class="modal__content-close" src="./images/close-icon.svg" alt="boton de cierre">
+      <img src="" alt="Imagen ampliada" id="popup-img">
+    </div>
+  </div>
+
   <script src="index.js"></script>
 </body>
 

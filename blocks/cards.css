@@ -1,15 +1,17 @@
 .cards {
     max-width: 882px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:18px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
     margin: 47px auto 0;
 }
+
 .cards__image {
     border-radius: 10px 10px 0px 0px;
     width: 282px;
     height: 282px;
     display: block;
+    cursor: pointer;
 }
 
 .cards__grid {
@@ -17,6 +19,7 @@
     width: 282px;
     position: relative;
 }
+
 
 .cards__name {
     font-size: 24px;
@@ -82,8 +85,8 @@
     .cards {
         max-width: 882px;
         display: grid;
-        grid-template-columns: repeat(1,282px);
+        grid-template-columns: repeat(1, 282px);
         margin: 47px auto 0;
         justify-content: center;
     }
-} 
+}
