@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
     },
   ];
-  
+
   function addCard(card) {
     const cardElement = document.createElement("div");
     cardElement.classList.add("cards__grid");
@@ -184,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const cardName = this.alt;
         popupImg.src = this.src;
         popupTitle.textContent = cardName;
+        popupImg.alt = `Ampliación de ${cardName}`;
         popup.style.display = "flex";
       });
     });

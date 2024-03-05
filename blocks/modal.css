@@ -135,12 +135,12 @@
 
 
 @media only screen and (max-width: 882px) {
-    .modal-content {
-        width: calc(100% - 40px);
+    .modal__content {
+        width: calc(100% - 80px);
         margin: 0 20px 0;
     }
 
-    .modal-content__close {
+    .modal__content-close {
         right: 0px;
         top: -50px;
     }

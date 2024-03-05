@@ -40,7 +40,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 350px;
 }
 
 .profile__button {
@@ -82,14 +81,16 @@
         height: auto;
     }
     .profile__add-info {
-        background-color: black;
-        border: 2px solid #FFF;
-        width: 282px;
-        height: 50px;
         margin: 20px auto 0;
     }
     .profile__picture {
         margin-bottom: 20px;
     }
-    
+    .profile__names {
+        margin: 0 auto;
+        max-width: 350px;
+    }
+    .profile__job {
+        text-align: center;
+    }
 } 

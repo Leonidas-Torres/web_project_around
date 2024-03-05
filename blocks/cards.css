@@ -4,6 +4,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
     margin: 47px auto 0;
+    min-height: 360px;
 }
 
 .cards__image {
@@ -88,5 +89,6 @@
         grid-template-columns: repeat(1, 282px);
         margin: 47px auto 0;
         justify-content: center;
+        min-height: 362px;
     }
 }
