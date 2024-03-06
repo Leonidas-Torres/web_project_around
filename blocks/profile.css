@@ -11,10 +11,12 @@
     flex-direction: row;
     align-items: center;
     height: 120px;
+    width: 100%;
 }
 
 .profile__names {
     margin: 0 26px 0;
+    width: 100%;
 }
 
 .profile__name {
@@ -27,7 +29,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 350px;
+    max-width: 100%;
 }
 
 .profile__job {
@@ -45,7 +47,7 @@
 .profile__button {
     display: inline;
     border: 1px solid #FFF;
-    width: 24px;
+
     height: 24px;
     background-color: #000;
     padding: 0;
@@ -87,8 +89,8 @@
         margin-bottom: 20px;
     }
     .profile__names {
-        margin: 0 auto;
-        max-width: 350px;
+        margin: 0;
+        max-width: 300px;
     }
     .profile__job {
         text-align: center;
