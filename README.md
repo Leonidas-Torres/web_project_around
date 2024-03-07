@@ -25,5 +25,8 @@ Galería de imágenes personalizable, donde puedes agregar imágenes y además c
 - **Fecha (2024-03-04)**: Correción de código js.
 - **Fecha (2024-02-28)**: Creación de carpetas y archivos que se ajusten al estándar BEM.
 
-## Link github
+## Link github pages
+https://leonidas-torres.github.io/web_project_around/
+
+## Link github Repository
 https://github.com/Leonidas-Torres/web_project_around
